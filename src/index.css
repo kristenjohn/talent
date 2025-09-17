@@ -1,0 +1,231 @@
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+
+
+  /* Scrollbar hide karne ke liye */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+.container {
+  display: flex;
+  height: 100vh; /* full screen height */
+}
+
+.left, .right {
+  flex: 1;              /* equal width */
+  overflow-y: scroll;   /* apna apna scroll */
+  padding: 20px;
+}
+
+.left {
+  background: #f8d7da;  /* light red */
+}
+
+.right {
+  background: #d1ecf1;  /* light blue */
+}
+
+
+
+
+/* Chrome, Safari and Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+/* html {
+  scrollbar-width: none;
+} */
+
+/* html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} */
+
+
+
+
+/* ------------- HIDE scrollbar everywhere EXCEPT elements with .custom-scrollbar ------------- */
+
+/* Firefox + legacy Edge */
+* { -ms-overflow-style: auto; } /* reset if you previously set none */
+*:not(.custom-scrollbar) { scrollbar-width: none; }
+
+/* Chromium / WebKit: hide for everything except .custom-scrollbar */
+*:not(.custom-scrollbar)::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+/* ---------- Styled scrollbar only for .custom-scrollbar elements ---------- */
+
+/* Firefox: show thin orange scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin; /* auto | thin | none */
+  scrollbar-color: orange #f1f1f1; /* thumb track */
+  
+}
+
+/* WebKit: horizontal height + styling */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 12px !important;   /* horizontal */
+  width: 12px !important;    /* vertical (if used) */
+
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+  border-radius: 999px !important;
+  margin: 0 !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: orange !important;
+  border-radius: 999px !important;
+  min-height: 6px !important;
+  box-shadow: inset 0 0 0 3px rgba(255,255,255,0.0) !important; /* keep shape */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: darkorange !important;
+}
+
+/* ---------- Optional: mask ends (visual gaps left & right) ---------- */
+.custom-scrollbar {
+  position: relative; /* required for pseudo mask */
+}
+  
+
+/* Footer Section */
+
+
+
+
+.site-footer{
+    width: 100%;
+    height: auto;
+    padding-top: 1px;
+     /* border: 2px solid rgb(154, 232, 17);  */
+    background-color: white;
+}
+.section-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    flex-wrap: wrap;
+    margin-left: 85px;
+   
+}
+
+.about-section, .integrated-services, .talent-services,
+.our-work,.happening-section,.button-section{
+    margin-top: 85px;
+}
+
+.h1-footer{
+    font-size: 23px;
+}
+.para-footer{
+    font-size: 17px;
+    text-decoration: none;
+}
+.para-footer:hover{
+    color: #F2682A;
+    cursor: pointer;
+    font-size: 20px;
+}
+.site-logo{
+    width: auto;
+      filter: brightness(0) saturate(100%) invert(40%) sepia(80%) saturate(300%) hue-rotate(150deg) ;
+    margin-left: 77px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .site-footer{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 400px) {
+    .site-footer{
+        width: 100%;
+    }
+   .site-logo{
+    width: 33%;
+}}
