@@ -16,6 +16,7 @@ const About = () => {
         Fade In 🚀
       </motion.div>
     </div>
+    console.log("About page");
 
 <Button variant="contained" className="!mt-4">Hello world</Button>
 <div className="h-96 w-full border-2 border-red-400 mt-10 flex flex-row">
